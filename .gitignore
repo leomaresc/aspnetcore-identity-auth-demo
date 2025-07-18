@@ -1,0 +1,71 @@
+﻿# Build results
+bin/
+obj/
+out/
+
+# User-specific files
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Visual Studio Code settings
+.vscode/
+
+# Rider
+.idea/
+
+# IIS Express
+.vs/
+*.vspscc
+*.vssscc
+*.dbmdl
+*.dbproj.schemaview
+*.pdb
+
+# Dotnet tools
+*.dotCover
+*.coverage
+*.coveragexml
+TestResults/
+
+# Logs
+*.log
+
+# Entity Framework
+Migrations/
+
+# Config secrets (usar secret manager de .NET)
+secrets.json
+appsettings.Development.json
+
+# Publish
+publish/
+*.publish.xml
+
+# npm / node (si usas algo de frontend con JS o bundlers)
+node_modules/
+dist/
+build/
+
+# Mac & Linux
+.DS_Store
+*.swp
+*.swo
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+
+# Others
+*.tmp
+*.bak
+*.old
+*.orig
+*.cache
+*.rej
