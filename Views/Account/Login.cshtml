@@ -1,0 +1,54 @@
+﻿@model LoginViewModel
+
+<div class="row col-md-10 offset-md-1">
+	<h1 class="text-primary text-center pt-2">Registrarse</h1>
+	<form method="post" asp-controller="Account" asp-action="Login">
+		<div class="border p-2 rounded">
+			<p class="text-center">Inicia sesión</p>
+			<div asp-validation-summary="All" class="text-danger"></div>
+			<div class="form-group">
+				<label asp-for="Email" class="col-12">Correo electrónico</label>
+				<div class="col-md-12">
+					<input asp-for="Email" class="form-control" />
+					<span asp-validation-for="Email" class="text-danger"></span>
+				</div>
+			</div>
+			<div class="form-group">
+				<label asp-for="Password" class="col-12">Contraseña</label>
+				<div class="col-md-12">
+					<input asp-for="Password" class="form-control" />
+					<span asp-validation-for="Password" class="text-danger"></span>
+				</div>
+			</div>
+			<div class="form-group pt-2">
+				<div class="col-md-12">
+					<div class="custom-checkbox">
+						<label>
+							<input asp-for="RememberMe" />
+							Recuerdame
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="form-group pt-3">
+				<div class="col-md-6 offset-md-3">
+					<button class="btn btn-success form-control" type="submit">Iniciar sesión</button>
+				</div>
+			</div>
+			<div class="row pt-5">
+				<div class="col-6">
+					<p>¿No tienes una cuenta? <a asp-controller="Account" asp-action="Register">Regístrate aquí</a></p>
+				</div>
+				<div class="col-6 text-end">
+					<p><a asp-controller="Account" asp-action="ForgotPassword">¿Olvidaste tu contraseña?</a></p>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+
+@section Scripts {
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
+}
