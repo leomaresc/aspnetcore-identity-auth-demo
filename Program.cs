@@ -16,10 +16,10 @@ options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectio
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
     .AddEntityFrameworkStores<AppDBContext>();
 
-builder.Services.ConfigureApplicationCookie(options =>
+builder.Services.Configure<IdentityOptions>(options =>
 {
-    options.LoginPath = "/Identity/Account/Login";
-    options.AccessDeniedPath = "/Identity/Account/AccessDenied";
+    options.Lockout.MaxFailedAccessAttempts = 3;
+    options.SignIn.RequireConfirmedEmail = false;
 });
 
 var app = builder.Build();
