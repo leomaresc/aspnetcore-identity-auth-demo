@@ -1,6 +1,7 @@
 ﻿using IdentityManager.Models;
 using IdentityManager.Models.ViewModels;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages;
 
@@ -10,10 +11,12 @@ namespace IdentityManager.Controllers
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
-        public AccountController(SignInManager<ApplicationUser> signInManager, UserManager<ApplicationUser> userManager)
+        private readonly IEmailSender _emailSender;
+        public AccountController(SignInManager<ApplicationUser> signInManager, UserManager<ApplicationUser> userManager, IEmailSender emailSender)
         {
             _signInManager = signInManager;
             _userManager = userManager;
+            _emailSender = emailSender;
         }
 
         public IActionResult Register()
@@ -52,6 +55,35 @@ namespace IdentityManager.Controllers
             ViewData["ReturnUrl"] = returnurl;
             return View();
         }
+
+        [HttpGet]
+        public IActionResult ForgotPasswordConfirmation()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ForgotPassword(ForgotPasswordViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = await _userManager.FindByEmailAsync(model.Email);
+                if (user == null)
+                {
+                    return RedirectToAction(nameof(ForgotPasswordConfirmation));
+                }
+                
+                var code = await _userManager.GeneratePasswordResetTokenAsync(user);
+                
+                var callbackUrl = Url.Action("ResetPassword", "Account", new { userId = user.Id, code }, protocol: Request.Scheme);
+
+                await _emailSender.SendEmailAsync(model.Email, "Reset Password", $"Please reset your password by clicking here: <a href='{callbackUrl}'>link</a>");
+                return RedirectToAction(nameof(ForgotPasswordConfirmation));
+            }
+
+            return View(model);
+        }
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(LoginViewModel model, string returnurl = null)
@@ -88,13 +120,6 @@ namespace IdentityManager.Controllers
         public IActionResult ForgotPassword()
         {
             return View();
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> ForgotPassword(ForgotPasswordViewModel model)
-        {
-            return View(model);
         }
 
         [HttpPost]

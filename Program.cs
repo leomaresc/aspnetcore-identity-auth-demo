@@ -1,7 +1,9 @@
 using IdentityManager.Data;
 using IdentityManager.Models;
+using IdentityManager.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
@@ -15,6 +17,8 @@ options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectio
 
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
     .AddEntityFrameworkStores<AppDBContext>();
+
+builder.Services.AddScoped<IEmailSender, EmailSender>();
 
 builder.Services.Configure<IdentityOptions>(options =>
 {
