@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "w5bVvFfeirvqpQAvj4reNCe6eFn8prplSfQf8F9f4Js=",
+  "Hash": "0WGxIsg76NzpDrB+emqgXBd/mlqEL72f33Ep9HdWxyg=",
   "Source": "IdentityManager",
   "BasePath": "_content/IdentityManager",
   "Mode": "Default",
@@ -99,6 +99,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\leomar.salazar\\Desktop\\ASP.NET Core Identity - Authentication & Authorization [MVC]\\IdentityManager\\IdentityManager\\wwwroot\\js\\qrcode.js",
+      "SourceId": "IdentityManager",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\leomar.salazar\\Desktop\\ASP.NET Core Identity - Authentication & Authorization [MVC]\\IdentityManager\\IdentityManager\\wwwroot\\",
+      "BasePath": "_content/IdentityManager",
+      "RelativePath": "js/qrcode#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "28yq9sd61h",
+      "Integrity": "Puct6facZo+VZzY6k1jflVlguukADZ69ZkFGcPiOhzU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\qrcode.js"
     },
     {
       "Identity": "C:\\Users\\leomar.salazar\\Desktop\\ASP.NET Core Identity - Authentication & Authorization [MVC]\\IdentityManager\\IdentityManager\\wwwroot\\js\\site.js",
@@ -1645,6 +1666,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-rqSPY2sUwQ8pXDE31Dx7i9UDKiFwPkFFZ8jp8JeKejU="
+        }
+      ]
+    },
+    {
+      "Route": "js/qrcode.28yq9sd61h.js",
+      "AssetFile": "C:\\Users\\leomar.salazar\\Desktop\\ASP.NET Core Identity - Authentication & Authorization [MVC]\\IdentityManager\\IdentityManager\\wwwroot\\js\\qrcode.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "33168"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Puct6facZo+VZzY6k1jflVlguukADZ69ZkFGcPiOhzU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 22 Jul 2025 00:11:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "28yq9sd61h"
+        },
+        {
+          "Name": "label",
+          "Value": "js/qrcode.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Puct6facZo+VZzY6k1jflVlguukADZ69ZkFGcPiOhzU="
+        }
+      ]
+    },
+    {
+      "Route": "js/qrcode.js",
+      "AssetFile": "C:\\Users\\leomar.salazar\\Desktop\\ASP.NET Core Identity - Authentication & Authorization [MVC]\\IdentityManager\\IdentityManager\\wwwroot\\js\\qrcode.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "33168"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Puct6facZo+VZzY6k1jflVlguukADZ69ZkFGcPiOhzU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 22 Jul 2025 00:11:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Puct6facZo+VZzY6k1jflVlguukADZ69ZkFGcPiOhzU="
         }
       ]
     },

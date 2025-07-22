@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\leomar.salazar\\Desktop\\ASP.NET Core Identity - Authentication & Authorization [MVC]\\IdentityManager\\IdentityManager\\wwwroot\\js\\qrcode.js",
+      "PackagePath": "staticwebassets\\js\\qrcode.js"
+    },
+    {
       "Id": "C:\\Users\\leomar.salazar\\Desktop\\ASP.NET Core Identity - Authentication & Authorization [MVC]\\IdentityManager\\IdentityManager\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

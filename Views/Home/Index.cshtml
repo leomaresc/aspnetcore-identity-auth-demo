@@ -4,5 +4,18 @@
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
+
+    @if(User.Identity.IsAuthenticated)
+    {
+        var twofactor = ViewData["TwoFactorEnabled"];
+        if(twofactor != null && twofactor.ToString().ToLower() == "true"){
+            <a asp-action="RemoveAuthenticator" asp-controller="Account" class="btn btn-warning">Remover y resetear autenticación de doble factor</a>
+        }
+        else{
+            <a asp-controller="Account" asp-action="EnableAuthenticator">Activa el authenticator</a>
+        }
+        <br />
+    }
+
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
