@@ -34,6 +34,14 @@
 					<span asp-validation-for="ConfirmPassword" class="text-danger"></span>
 				</div>
 			</div>
+			<div class="form-group">
+				<label asp-for="RoleSelected" class="col-12">Confirma tu contraseña</label>
+				<div class="col-md-12">
+					<select asp-for="RoleSelected" asp-items="@Model.RoleList" class="form-select">
+						<option disabled selected>--Selecciona el rol de tu usuario--</option>
+					</select>
+				</div>
+			</div>
 			<div class="form-group pt-3">
 				<div class="col-md-6 offset-md-3">
 					<button class="btn btn-success form-control" type="submit">Registrarse</button>

@@ -21,6 +21,11 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
 
 builder.Services.AddScoped<IEmailSender, EmailSender>();
 
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.AccessDeniedPath = "/Account/NoAccess";
+});
+
 builder.Services.Configure<IdentityOptions>(options =>
 {
     options.Lockout.MaxFailedAccessAttempts = 3;

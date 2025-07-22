@@ -15,6 +15,13 @@
             <a asp-controller="Account" asp-action="EnableAuthenticator">Activa el authenticator</a>
         }
         <br />
+        <br />
+    }
+
+    @if(User.IsInRole(SD.Admin)){
+        <h2 class="text-success">¡Eres administrador!</h2>
+    } else{
+        <h3>¡Bienvenido @User.Identity.Name !</h3>
     }
 
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
