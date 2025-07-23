@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Security.Claims;
 using System.Text.Encodings.Web;
 
 namespace IdentityManager.Controllers
@@ -63,7 +64,8 @@ namespace IdentityManager.Controllers
                 {
                     UserName = model.Email,
                     Email = model.Email,
-                    Name = model.Name
+                    Name = model.Name,
+                    DateCreated = DateTime.Now
                 };
 
                 var result = await _userManager.CreateAsync(user, model.Password);
@@ -141,6 +143,16 @@ namespace IdentityManager.Controllers
                 var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, lockoutOnFailure: true);
                 if (result.Succeeded)
                 {
+                    var user = await _userManager.FindByEmailAsync(model.Email);
+                    var claims = await _userManager.GetClaimsAsync(user);
+
+                    var claimToRemove = claims.FirstOrDefault(u => u.Type == "FirstName");
+                    if (claimToRemove != null)
+                    {
+                        await _userManager.RemoveClaimAsync(user, claimToRemove);
+                    }
+
+                    await _userManager.AddClaimAsync(user, new Claim("FirstName", user.Name));
                     return LocalRedirect(returnurl);
                 }
                 if (result.RequiresTwoFactor)

@@ -32,6 +32,23 @@
                         <li>
                             <a class="nav-link text-dark" asp-area="" asp-controller="Role" asp-action="Index">Lista de roles</a>
                         </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Access Checker
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" asp-controller="AccessChecker" asp-action="AllAccess">Acceso público</a></li>
+                                <li><a class="dropdown-item" asp-controller="AccessChecker" asp-action="AuthorizedAccess">Solo logeados</a></li>
+                                <li><a class="dropdown-item" asp-controller="AccessChecker" asp-action="AdminRoleAccess">Acceso a admins</a></li>
+                                <li><a class="dropdown-item" asp-controller="AccessChecker" asp-action="UserORAdminRoleAccess"> Acceso a admin o user</a></li>
+                                <li><a class="dropdown-item" asp-controller="AccessChecker" asp-action="UserANDAdminRoleAccess"> Acceso a user y admin</a></li>
+                                <li><a class="dropdown-item" asp-controller="AccessChecker" asp-action="Admin_CreateAccess">Acceso a admin con claim Create</a></li>
+                                <li><a class="dropdown-item" asp-controller="AccessChecker" asp-action="Admin_Create_Edit_DeleteAccess">Acceso a admin con todos los claims</a></li>
+                                <li><a class="dropdown-item" asp-controller="AccessChecker" asp-action="Admin_Sudo">¡SUDO!</a></li>
+                                <li><a class="dropdown-item" asp-controller="AccessChecker" asp-action="FirstNameAuth">Nombre especial</a></li>
+                                <li><a class="dropdown-item" asp-controller="AccessChecker" asp-action="SoloLeomar">Solo Leomar</a></li>
+                            </ul>
+                        </li>
                     </ul>
                     <partial name="_LoginPartialCustom" />
                 </div>

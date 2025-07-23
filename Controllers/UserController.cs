@@ -27,8 +27,10 @@ namespace IdentityManager.Controllers
             foreach (var user in userList)
             {
                 var user_role = await _usermanager.GetRolesAsync(user) as List<String>;
-
                 user.Role = String.Join(", ", user_role);
+
+                var user_claim = _usermanager.GetClaimsAsync(user).GetAwaiter().GetResult().Select(u => u.Type);
+                user.UserClaim = String.Join(", ", user_claim);
             }
 
             return View(userList);

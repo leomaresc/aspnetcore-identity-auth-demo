@@ -1,5 +1,6 @@
 ﻿using IdentityManager.Data;
 using IdentityManager.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -64,6 +65,7 @@ namespace IdentityManager.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Policy = "OnlySudoAdminChecker")]
         public async Task<IActionResult> Delete(string roleId)
         {
             var objFromDb = _db.Roles.FirstOrDefault(u => u.Id == roleId);

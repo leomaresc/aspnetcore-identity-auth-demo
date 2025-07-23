@@ -28,6 +28,46 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
+[C:/Users/leomar.salazar/Desktop/ASP.NET Core Identity - Authentication & Authorization \[MVC\]/IdentityManager/IdentityManager/Views/AccessChecker/AdminRoleAccess.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzQ2hlY2tlclxBZG1pblJvbGVBY2Nlc3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/leomar.salazar/Desktop/ASP.NET Core Identity - Authentication & Authorization \[MVC\]/IdentityManager/IdentityManager/Views/AccessChecker/Admin_CreateAccess.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzQ2hlY2tlclxBZG1pbl9DcmVhdGVBY2Nlc3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/leomar.salazar/Desktop/ASP.NET Core Identity - Authentication & Authorization \[MVC\]/IdentityManager/IdentityManager/Views/AccessChecker/Admin_Create_Edit_DeleteAccess.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzQ2hlY2tlclxBZG1pbl9DcmVhdGVfRWRpdF9EZWxldGVBY2Nlc3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/leomar.salazar/Desktop/ASP.NET Core Identity - Authentication & Authorization \[MVC\]/IdentityManager/IdentityManager/Views/AccessChecker/Admin_Sudo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzQ2hlY2tlclxBZG1pbl9TdWRvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/leomar.salazar/Desktop/ASP.NET Core Identity - Authentication & Authorization \[MVC\]/IdentityManager/IdentityManager/Views/AccessChecker/AllAccess.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzQ2hlY2tlclxBbGxBY2Nlc3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/leomar.salazar/Desktop/ASP.NET Core Identity - Authentication & Authorization \[MVC\]/IdentityManager/IdentityManager/Views/AccessChecker/AuthorizedAccess.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzQ2hlY2tlclxBdXRob3JpemVkQWNjZXNzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/leomar.salazar/Desktop/ASP.NET Core Identity - Authentication & Authorization \[MVC\]/IdentityManager/IdentityManager/Views/AccessChecker/FirstNameAuth.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzQ2hlY2tlclxGaXJzdE5hbWVBdXRoLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/leomar.salazar/Desktop/ASP.NET Core Identity - Authentication & Authorization \[MVC\]/IdentityManager/IdentityManager/Views/AccessChecker/SoloLeomar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzQ2hlY2tlclxTb2xvTGVvbWFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/leomar.salazar/Desktop/ASP.NET Core Identity - Authentication & Authorization \[MVC\]/IdentityManager/IdentityManager/Views/AccessChecker/UserANDAdminRoleAccess.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzQ2hlY2tlclxVc2VyQU5EQWRtaW5Sb2xlQWNjZXNzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/leomar.salazar/Desktop/ASP.NET Core Identity - Authentication & Authorization \[MVC\]/IdentityManager/IdentityManager/Views/AccessChecker/UserORAdminRoleAccess.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzQ2hlY2tlclxVc2VyT1JBZG1pblJvbGVBY2Nlc3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/leomar.salazar/Desktop/ASP.NET Core Identity - Authentication & Authorization \[MVC\]/IdentityManager/IdentityManager/Views/Account/AccountCreated.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBY2NvdW50Q3JlYXRlZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

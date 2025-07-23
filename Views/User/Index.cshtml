@@ -16,7 +16,8 @@
 					<th>Correo</th>
 					<th>Nombre</th>
 					<th>Roles</th>
-					<th></th>
+					<th>Claims</th>
+					<th class="text-end">Opciones</th>
 				</tr>
 				@foreach(var item in Model){
 					<tr>
@@ -28,6 +29,9 @@
 						</td>
 						<td>
 							@item.Role
+						</td>
+						<td>
+							@item.UserClaim
 						</td>
 						<td style="width:450px;">
 							<div class="row">
