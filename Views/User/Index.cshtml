@@ -29,9 +29,37 @@
 						<td>
 							@item.Role
 						</td>
-						<td>
-							@* <a class="btn btn-primary" asp-controller="User" asp-action="Edit" asp-route-id="@item.Id">Editar</a> *@
-							@* <a class="btn btn-danger" asp-controller="User" asp-action="Delete" asp-route-id="@item.Id">Eliminar</a</td> *@
+						<td style="width:450px;">
+							<div class="row">
+								<div class="col-3">
+									<a asp-action="ManageRole" asp-route-userId="@item.Id" class="btn btn-primary w-100" style="cursor:pointer;">
+										Roles
+									</a>
+								</div>
+								<div class="col-3">
+									<a asp-action="ManageUserClaim" asp-route-userId="@item.Id" class="btn btn-info w-100" style="cursor:pointer;">
+										Claims
+									</a>
+								</div>
+								<div class="col-3">
+									@if(item.LockoutEnd == null || item.LockoutEnd < DateTime.Now){
+										<form asp-action="LockUnlock" asp-route-userId="@item.Id" >
+											<input type="submit" class="btn btn-success w-100" style="cursor:pointer;" value="Bloquear" />
+										</form>
+									}
+									else{
+										<form asp-action="LockUnlock" asp-route-userId="@item.Id">
+											<input type="submit" class="btn btn-warning w-100" style="cursor:pointer;" value="Desbloquear" />
+										</form>
+									}
+								</div>
+								<div class="col-3">
+									<form asp-action="DeleteUser" asp-route-userId="@item.Id" >
+										<button type="submit" class="btn btn-danger w-100" onclick="return confirm('¿Seguro que deseas eliminar este usuario?')">Eliminar</button>
+									</form>
+								</div>
+							</div>
+						</td>
 					</tr>
 				}
 			</table>

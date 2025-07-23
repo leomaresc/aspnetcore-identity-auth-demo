@@ -120,6 +120,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/leomar.salazar/Desktop/ASP.NET Core Identity - Authentication & Authorization \[MVC\]/IdentityManager/IdentityManager/Views/User/ManageRole.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxNYW5hZ2VSb2xlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/leomar.salazar/Desktop/ASP.NET Core Identity - Authentication & Authorization \[MVC\]/IdentityManager/IdentityManager/Views/User/ManageUserClaim.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxNYW5hZ2VVc2VyQ2xhaW0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/leomar.salazar/Desktop/ASP.NET Core Identity - Authentication & Authorization \[MVC\]/IdentityManager/IdentityManager/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
