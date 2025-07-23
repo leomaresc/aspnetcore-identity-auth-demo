@@ -1,0 +1,62 @@
+﻿@model Microsoft.AspNetCore.Identity.IdentityRole
+
+@{
+	var title = "Crea rol";
+}
+
+<form method="post">
+	@if(Model!=null && !String.IsNullOrEmpty(Model.NormalizedName)){
+		title = "Editar rol";
+		<input type="hidden" asp-for="@Model.Id" />
+		<input type="hidden" asp-for="@Model.NormalizedName" />
+	}
+	<br />
+	<div class="card shadow border-0 mt-4">
+		<div class="card-header bg-success bg-gradient ml-0 py-3">
+			<div class="row">
+				<div class="col-12 text-center">
+					<h2 class="text-white py-2">@title</h2>
+				</div>
+			</div>
+		</div>
+		<div class="card-body p-4">
+			<div class="border p-2 rounded">
+				<p class="text-center">Crea un nuevo rol</p>
+				@if (Model != null && !String.IsNullOrEmpty(Model.NormalizedName)) { 
+				<div class="form-group">
+					<label asp-for="Id" class="col-12"></label>
+					<div class="col-md-12">
+						<input asp-for="Id" readonly class="form-control" />
+					</div>
+				</div>
+				}
+				<div class="form-group">
+					<label asp-for="Name" class="col-12">Nombre</label>
+					<div class="col-md-12">
+						<input asp-for="Name" class="form-control" />
+						<span asp-validation-for="Name" class="tex-danger"></span>
+					</div>
+				</div>
+				<div class="form-group pt-3 row">
+					<div class="col-md-6">
+						<a class="btn btn-secondary w-100" asp-action="Index">Atras</a>
+					</div>
+
+					<div class="col-md-6">
+						@if(Model != null && !String.IsNullOrEmpty(Model.NormalizedName))
+						{
+							<input type="submit" class="btn btn-success w-100" value="Actualizar" />
+						}
+						else
+						{
+							<input type="submit" class="btn btn-success w-100" value="Crear" />
+						}
+					</div>
+
+				</div>
+			</div>
+
+
+	</div>
+</div>
+</form>

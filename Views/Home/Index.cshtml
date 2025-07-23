@@ -20,7 +20,9 @@
 
     @if(User.IsInRole(SD.Admin)){
         <h2 class="text-success">¡Eres administrador!</h2>
-    } else{
+    } 
+    @if (User.IsInRole(SD.User))
+    {
         <h3>¡Bienvenido @User.Identity.Name !</h3>
     }
 

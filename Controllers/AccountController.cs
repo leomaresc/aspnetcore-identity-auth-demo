@@ -81,7 +81,7 @@ namespace IdentityManager.Controllers
 
                     var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code }, protocol: Request.Scheme);
 
-                    await _emailSender.SendEmailAsync(model.Email, "Confirma tu cuenta", $"<p>Loco confirma tu vaina tiguere</p><br /> <a href='{callbackUrl}'>Date un click aquí mi loco</a>");
+                    await _emailSender.SendEmailAsync(model.Email, "Confirma tu cuenta", $"<p>Por favor confirma tu cuenta</p><br /> <a href='{callbackUrl}'>Haz click aquí.</a>");
 
                     return RedirectToAction("AccountCreated");
                 }
